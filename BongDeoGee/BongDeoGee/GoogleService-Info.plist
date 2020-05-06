@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1062830587284-hhkki0spigrv6e01ok4umhp6pacv0nvg.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1062830587284-hhkki0spigrv6e01ok4umhp6pacv0nvg</string>
+	<key>API_KEY</key>
+	<string>AIzaSyD0l1fBO1DQItHnZe-odzv-W19ClgHHAQs</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1062830587284</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>kr.jisng.identifier.BongDeoGee</string>
+	<key>PROJECT_ID</key>
+	<string>bongdeogee</string>
+	<key>STORAGE_BUCKET</key>
+	<string>bongdeogee.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1062830587284:ios:d33cec66315b43e543e381</string>
+	<key>DATABASE_URL</key>
+	<string>https://bongdeogee.firebaseio.com</string>
+</dict>
+</plist>
