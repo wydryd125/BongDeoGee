@@ -13,9 +13,8 @@
 
 ## Sample Clips
 
+![BongDeoGee](https://user-images.githubusercontent.com/57229970/81280967-39f2e280-9094-11ea-9d34-fe8fb01ca050.gif)
 
-
-![BongDeoGee](https://user-images.githubusercontent.com/57229970/81167574-6513fe00-8fd0-11ea-991b-08794af72cba.gif)
 
 ## Using Skills
 
