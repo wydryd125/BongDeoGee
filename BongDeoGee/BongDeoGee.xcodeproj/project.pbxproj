@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2908758F1688862A3582D72F /* Pods_BongDeoGee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BFEECA649956DC9023EB6BB /* Pods_BongDeoGee.framework */; };
-		7055DC1A23ED1F3300641FB2 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7055DC1923ED1F3300641FB2 /* TutorialViewController.swift */; };
-		7055DC2023ED4A2200641FB2 /* 야놀자 야체 OTF Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7055DC1F23ED4A2200641FB2 /* 야놀자 야체 OTF Bold.otf */; };
-		7055DC2223ED4A8300641FB2 /* 야놀자 야체 OTF Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7055DC2123ED4A8300641FB2 /* 야놀자 야체 OTF Regular.otf */; };
 		A605CBFD23E6CED700777436 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A605CBFC23E6CED700777436 /* AppDelegate.swift */; };
 		A605CC0123E6CED700777436 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A605CC0023E6CED700777436 /* GameViewController.swift */; };
 		A605CC0623E6CED900777436 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A605CC0523E6CED900777436 /* Assets.xcassets */; };
@@ -28,19 +25,13 @@
 		A6309A0623EC02080064633E /* RankProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6309A0523EC02080064633E /* RankProvider.swift */; };
 		A6309A0823EC027C0064633E /* RankModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6309A0723EC027C0064633E /* RankModel.swift */; };
 		A66C066A23EBFE7F0057A733 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A66C066923EBFE7F0057A733 /* GoogleService-Info.plist */; };
-		A6E0598623EC25A800AD1092 /* RankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E0598523EC25A800AD1092 /* RankViewController.swift */; };
 		A6E0598823EC3CC700AD1092 /* 큰일났어요.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A6E0598723EC3CC700AD1092 /* 큰일났어요.mp3 */; };
+		A6E0598A23ED3AD600AD1092 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E0598923ED3AD600AD1092 /* TutorialViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		02C1254DA898DAC0D1F42657 /* Pods-BongDeoGee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BongDeoGee.release.xcconfig"; path = "Target Support Files/Pods-BongDeoGee/Pods-BongDeoGee.release.xcconfig"; sourceTree = "<group>"; };
 		2BFEECA649956DC9023EB6BB /* Pods_BongDeoGee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BongDeoGee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7055DC1923ED1F3300641FB2 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
-		7055DC1F23ED4A2200641FB2 /* 야놀자 야체 OTF Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "야놀자 야체 OTF Bold.otf"; sourceTree = "<group>"; };
-		7055DC2123ED4A8300641FB2 /* 야놀자 야체 OTF Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "야놀자 야체 OTF Regular.otf"; sourceTree = "<group>"; };
-		7055DC2323ED4C1E00641FB2 /* 서울남산 장체EB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "서울남산 장체EB.ttf"; sourceTree = "<group>"; };
-		7055DC2423ED4CD800641FB2 /* 동그라미재단B.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "동그라미재단B.ttf"; sourceTree = "<group>"; };
-		7055DC2523ED4DF700641FB2 /* Youth.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Youth.otf; sourceTree = "<group>"; };
 		88CA80909886C28E0E1A55A6 /* Pods-BongDeoGee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BongDeoGee.debug.xcconfig"; path = "Target Support Files/Pods-BongDeoGee/Pods-BongDeoGee.debug.xcconfig"; sourceTree = "<group>"; };
 		A605CBF923E6CED700777436 /* BongDeoGee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BongDeoGee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A605CBFC23E6CED700777436 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,8 +52,8 @@
 		A6309A0523EC02080064633E /* RankProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankProvider.swift; sourceTree = "<group>"; };
 		A6309A0723EC027C0064633E /* RankModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankModel.swift; sourceTree = "<group>"; };
 		A66C066923EBFE7F0057A733 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		A6E0598523EC25A800AD1092 /* RankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankViewController.swift; sourceTree = "<group>"; };
 		A6E0598723EC3CC700AD1092 /* 큰일났어요.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "큰일났어요.mp3"; sourceTree = "<group>"; };
+		A6E0598923ED3AD600AD1092 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,10 +145,9 @@
 			children = (
 				A605CC2723E90B6800777436 /* StartSettingViewController.swift */,
 				A605CC2923E924D200777436 /* MainViewController.swift */,
-				7055DC1923ED1F3300641FB2 /* TutorialViewController.swift */,
+				A6E0598923ED3AD600AD1092 /* TutorialViewController.swift */,
 				A605CC0023E6CED700777436 /* GameViewController.swift */,
 				A605CC1D23E82FA600777436 /* GameOverViewController.swift */,
-				A6E0598523EC25A800AD1092 /* RankViewController.swift */,
 				A605CC1B23E7B3E500777436 /* FireBongViewController.swift */,
 				A605CC2B23EBAF8800777436 /* LaunchViewController.swift */,
 			);
@@ -167,11 +157,6 @@
 		A605CC2123E8359C00777436 /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				7055DC2523ED4DF700641FB2 /* Youth.otf */,
-				7055DC2423ED4CD800641FB2 /* 동그라미재단B.ttf */,
-				7055DC2323ED4C1E00641FB2 /* 서울남산 장체EB.ttf */,
-				7055DC2123ED4A8300641FB2 /* 야놀자 야체 OTF Regular.otf */,
-				7055DC1F23ED4A2200641FB2 /* 야놀자 야체 OTF Bold.otf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -247,9 +232,7 @@
 			files = (
 				A6E0598823EC3CC700AD1092 /* 큰일났어요.mp3 in Resources */,
 				A605CC0623E6CED900777436 /* Assets.xcassets in Resources */,
-				7055DC2023ED4A2200641FB2 /* 야놀자 야체 OTF Bold.otf in Resources */,
 				A66C066A23EBFE7F0057A733 /* GoogleService-Info.plist in Resources */,
-				7055DC2223ED4A8300641FB2 /* 야놀자 야체 OTF Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,12 +295,11 @@
 				A605CBFD23E6CED700777436 /* AppDelegate.swift in Sources */,
 				A605CC2823E90B6800777436 /* StartSettingViewController.swift in Sources */,
 				A605CC1E23E82FA600777436 /* GameOverViewController.swift in Sources */,
+				A6E0598A23ED3AD600AD1092 /* TutorialViewController.swift in Sources */,
 				A605CC3423EBE40700777436 /* LevelSelectView.swift in Sources */,
 				A605CC1123E6CFAC00777436 /* CustomCollectionCell.swift in Sources */,
 				A605CC1A23E6E48500777436 /* ControlView.swift in Sources */,
-				7055DC1A23ED1F3300641FB2 /* TutorialViewController.swift in Sources */,
 				A6309A0623EC02080064633E /* RankProvider.swift in Sources */,
-				A6E0598623EC25A800AD1092 /* RankViewController.swift in Sources */,
 				A605CC1323E6DAF600777436 /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,13 +427,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6H9Q3M8H26;
+				DEVELOPMENT_TEAM = G63629C67V;
 				INFOPLIST_FILE = BongDeoGee/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.youkyung;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.jisng.identifier.BongDeoGee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

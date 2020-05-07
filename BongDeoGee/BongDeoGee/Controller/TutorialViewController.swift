@@ -9,6 +9,8 @@
 import UIKit
 
 class TutorialViewController: UIViewController {
+
+    private let level: GameSet
     
     private let levelView = LevelSelectView()
     private let backgroudImage = UIImageView()
@@ -20,10 +22,20 @@ class TutorialViewController: UIViewController {
         super.viewDidLoad()
         setUI()
         setLayout()
-        view.backgroundColor = .white
-
-
+        view.backgroundColor = #colorLiteral(red: 1, green: 0.9623679519, blue: 0.8724053502, alpha: 1)
     }
+    // 뷰컨트롤러를 생성할때 필수값(레벨)을 받아와서 생성함. 오버라이드 인잇이 안되기 때문에 이렇게 작성함.
+    // 오버라이드 인잇되긴하는데 복잡쓰
+    // 생성자 다시보기
+    init(level: GameSet) {
+        self.level = level
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     func setUI() {
         backgroudImage.image = UIImage(named: "튜토리얼")
         backgroudImage.contentMode = .scaleToFill
@@ -66,18 +78,8 @@ class TutorialViewController: UIViewController {
     
     @objc func didTabStartButton(_ button: UIButton) {
         let startOrigin = startButton.transform
-        let gameVC = GameViewController()
+        let gameVC = GameViewController(level: level)
 
-        switch levelView.levelIndex {
-        case 0:
-            gameVC.setTime = GameSet.level1.interval
-        case 1:
-            gameVC.setTime = GameSet.level2.interval
-        case 2:
-            gameVC.setTime = GameSet.level3.interval
-        default:
-            break
-        }
         UIView.animate(
             withDuration: 0.3,
             delay: 0,
@@ -86,6 +88,7 @@ class TutorialViewController: UIViewController {
                 self.startButton.transform = startOrigin
 
         })
+        //지금으로부터 3초뒤에 {code} 실행~
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
         gameVC.modalPresentationStyle = .fullScreen
         gameVC.modalTransitionStyle = .crossDissolve
@@ -93,8 +96,5 @@ class TutorialViewController: UIViewController {
 
         }
     }
-
-          
-    
-
 }
+

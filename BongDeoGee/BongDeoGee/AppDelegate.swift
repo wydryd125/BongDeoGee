@@ -39,8 +39,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = .systemBackground
         if UserDefaults.standard.string(forKey: UserDefault.name) != nil {
             window?.rootViewController = MainViewController(name: UserDefaults.standard.string(forKey: UserDefault.name)!,
-                                                            level: 0,
-                                                            score: UserDefaults.standard.integer(forKey: UserDefault.score) )
+                                                            level: GameSet.level1,
+                                                            score: UserDefaults.standard.integer(forKey: UserDefault.score1)
+            )
         } else {
             window?.rootViewController = LaunchViewController()
         }

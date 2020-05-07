@@ -12,7 +12,7 @@ import FirebaseDatabase
 
 class GameOverViewController: UIViewController {
     
-    private var userLevel: Int
+    private var userLevel: Double
     private var userScore: Int
     
     private let backgroundView = UIImageView()
@@ -22,6 +22,8 @@ class GameOverViewController: UIViewController {
     private let endButton = UIButton()
     private let startButton = UIButton()
     
+    private let minusLabel = UILabel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI(level: userLevel, score: userScore)
@@ -30,7 +32,7 @@ class GameOverViewController: UIViewController {
         //        uploadToDatabase()
     }
     
-    init(level: Int, score: Int) {
+    init(level: Double, score: Int) {
         userLevel = level
         userScore = score
         super.init(nibName: nil, bundle: nil)
@@ -39,42 +41,55 @@ class GameOverViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+    //enter, startbutton
     @objc func didTabButton(_ button: UIButton) {
-        print("버튼")
-        if userScore > UserDefaults.standard.integer(forKey: UserDefault.score) {
-            UserDefaults.standard.set(userScore, forKey: UserDefault.score)
+        switch levelIdx {
+        case 0:
+            if userScore > UserDefaults.standard.integer(forKey: UserDefault.score1) {
+                UserDefaults.standard.set(userScore, forKey: UserDefault.score1)
+            }
+        case 1:
+            if userScore > UserDefaults.standard.integer(forKey: UserDefault.score2) {
+                UserDefaults.standard.set(userScore, forKey: UserDefault.score2)
+            }
+        case 2:
+            if userScore > UserDefaults.standard.integer(forKey: UserDefault.score3) {
+                UserDefaults.standard.set(userScore, forKey: UserDefault.score3)
+            }
+        default:
+            break
         }
-        
+        //종료버튼이면
         if button == endButton {
+           // 네번째 뷰이기 때문에 프레젠팅 3과, dismiss
         self.presentingViewController?.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
         } else {
-            if  startButton.imageView?.image == UIImage(named: "다음단계") {
-            self.presentingViewController?.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+            if startButton.imageView?.image == UIImage(named: "다음") {
+                self.presentingViewController?.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
             } else {
-                self.dismiss(animated: true, completion: nil)
-                // dismiss 로는 게임 첫 화면 상태가 안나오는데? 
+                dismiss(animated: true)
             }
         }
     }
-    
-    private func setUI(level: Int, score: Int) {
-        switch level {
+    //()안에 파라미터를 만들어주면 가져와서 사용할수 있음.
+    private func setUI(level: Double, score: Int) {
+        switch levelIdx + 1 {
         case 1:
             if score < 1000 {
-                     statusLabel.text = "아쉽네요 재도전!"
+                statusLabel.text = "아쉽네요 재도전!"
                 startButton.setImage(UIImage(named: "재도전"), for: .normal)
+                minusLabel.text = "부족한 점수 : " + "\(1000-userScore)"
             } else {
-             statusLabel.text = "Wow SUCCESS!!"
-                startButton.setImage(UIImage(named: "다음단계"), for: .normal)
+                statusLabel.text = "Wow SUCCESS!!"
+                startButton.setImage(UIImage(named: "다음"), for: .normal)
             }
         case 2:
             if score < 4000 {
-                     statusLabel.text = "아쉽네요 재도전!"
+                statusLabel.text = "아쉽네요 재도전!"
                 startButton.setImage(UIImage(named: "재도전"), for: .normal)
             } else {
                 statusLabel.text = "Wow SUCCESS!!"
-                startButton.setImage(UIImage(named: "다음단계"), for: .normal)
+                startButton.setImage(UIImage(named: "다음"), for: .normal)
             }
         case 3:
             if score < 5000 {
@@ -82,24 +97,35 @@ class GameOverViewController: UIViewController {
                 startButton.setImage(UIImage(named: "재도전"), for: .normal)
             } else {
                 statusLabel.text = "Wow SUCCESS!!"
-                startButton.setImage(UIImage(named: "다음단계"), for: .normal)
+                startButton.setImage(UIImage(named: "다음"), for: .normal)
             }
         default:
             break
         }
-        
+//
+//        switch userLevel {
+//        case GameSet.level1.interval:
+//            levelLabel.text = GameSet.level1.toString
+//        case GameSet.level1.interval:
+//            levelLabel.text = GameSet.level2.toString
+//        case GameSet.level1.interval:
+//            levelLabel.text = GameSet.level3.toString
+//        default:
+//            break
+//        }
+//        
         backgroundView.image = UIImage(named: "결과배경")
         backgroundView.contentMode = .scaleToFill
         
-//        statusLabel.text = "SUCCESS / FAIL"
         statusLabel.font = .systemFont(ofSize: 40)
-    
         
-        levelLabel.text = "LEVEL " + String(userLevel)
+//        levelLabel.text = "LEVEL " + String(levelIdx+1)
         levelLabel.font = .systemFont(ofSize: 30)
         
         scoreLabel.text = String(userScore)
         scoreLabel.font = .systemFont(ofSize: 40)
+        
+        minusLabel.font = .systemFont(ofSize: 20)
         
         endButton.setImage(UIImage(named: "종료"), for: .normal)
         endButton.backgroundColor = .clear
@@ -107,7 +133,6 @@ class GameOverViewController: UIViewController {
         endButton.addTarget(self, action: #selector(didTabButton(_:)), for: .touchUpInside)
         
         
-//        startButton.setTitle("재도전/다음 단계", for: .normal)
         startButton.backgroundColor = .clear
         startButton.imageView?.contentMode = .scaleAspectFit
         startButton.addTarget(self, action: #selector(didTabButton(_:)), for: .touchUpInside)
@@ -122,7 +147,7 @@ class GameOverViewController: UIViewController {
         backgroundView.widthAnchor.constraint(equalTo: guide.widthAnchor, multiplier: 0.95).isActive = true
         backgroundView.heightAnchor.constraint(equalTo: guide.heightAnchor, multiplier: 0.8).isActive = true
         
-        [statusLabel, levelLabel, scoreLabel, endButton, startButton].forEach({
+        [statusLabel, levelLabel, scoreLabel, endButton, startButton, minusLabel].forEach({
             view.addSubview($0)
             $0.translatesAutoresizingMaskIntoConstraints = false
         })
@@ -136,6 +161,10 @@ class GameOverViewController: UIViewController {
         scoreLabel.topAnchor.constraint(equalTo: levelLabel.bottomAnchor, constant: Padding.padding).isActive = true
         scoreLabel.centerXAnchor.constraint(equalTo: guide.centerXAnchor).isActive = true
         
+        minusLabel.topAnchor.constraint(equalTo: scoreLabel.bottomAnchor, constant: Padding.padding/2).isActive = true
+        minusLabel.centerXAnchor.constraint(equalTo: guide.centerXAnchor).isActive = true
+        
+        
         endButton.bottomAnchor.constraint(equalTo: backgroundView.bottomAnchor, constant: -32).isActive = true
         endButton.leadingAnchor.constraint(equalTo: backgroundView.leadingAnchor, constant: 8).isActive = true
         endButton.heightAnchor.constraint(equalTo: backgroundView.heightAnchor, multiplier: 0.2).isActive = true
@@ -146,43 +175,4 @@ class GameOverViewController: UIViewController {
         startButton.heightAnchor.constraint(equalTo: backgroundView.heightAnchor, multiplier: 0.2).isActive = true
         startButton.widthAnchor.constraint(equalTo: backgroundView.widthAnchor, multiplier: 0.4).isActive = true
     }
-    
-    //    private func uploadToDatabase() {
-    //
-    //        let values = ["userName": staticName ?? "noname",
-    //                                 "userScore": "\(userScore)" ?? "0",
-    //                                 "userLevel": "\(userLevel)" ?? "0",
-    //                       ] as [String : Any]
-    //
-    //
-    //        Database.database().reference().child("\(staticName)").setValue(values) { (error, ref) in
-    //            if error != nil {
-    //                print("Success Upload To Database")
-    //                print(ref)
-    //            }
-    //        }
-    //
-    //        allLoadFromDatabase()
-    //}
-    //
-    //    private func allLoadFromDatabase() {
-    //
-    //        var upperNameArray: Array<String> = []
-    //
-    //        Database.database().reference().observeSingleEvent(of: .value) { (snapshop) in
-    //            upperNameArray = snapshop.value as? [String] ?? ["wrongName"]
-    //
-    //        }
-    //
-    //        for name in upperNameArray {
-    //            Database.database().reference().child(name).observeSingleEvent(of: .value) { (snapshop) in
-    //            let data = snapshop.value as? [String:Any] ?? ["fail":"fail"]
-    //            guard let name = data["userName"] as? String else { return }
-    //            guard let score = data["userScore"] as? String else {return }
-    //            guard let level = data["userLevel"] as? String else { return }
-    //            }
-    //
-    //        }
-    //
-    //    }
 }
