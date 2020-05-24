@@ -40,17 +40,9 @@
 
 ## Sample Clips
 
-### 1차 결과
-
-![BongDeoGee 오후 7 07 10](https://user-images.githubusercontent.com/57229970/81282494-319ba700-9096-11ea-8949-ea200f48983a.gif)
-
-
-
-### 2차 결과
-
-발표 후 반응이 좋아 앱스토어에 출시까지 계획하고 이미지와 이름을 변경하였습니다.
-
-<img src = "https://github.com/jisng/hackathon-2/blob/master/Video/2Rec.gif"></img>
+| 1차 결과                                                     | 2차 결과                                                     |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| ![BongDeoGee 오후 7 07 10](https://user-images.githubusercontent.com/57229970/81282494-319ba700-9096-11ea-8949-ea200f48983a.gif) | <img src = "https://github.com/jisng/hackathon-2/blob/master/Video/2Rec.gif"></img> |      |
 
 
 
