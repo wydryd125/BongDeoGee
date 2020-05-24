@@ -29,7 +29,7 @@
 
 - Language: Swift
 
-- Framework: UIKit, UIView Animation
+- Framework: UIKit, UIView Animation, AVAudioPlayer 
 
 - 담당 구현 파트
   - 전체적인 UI 구현
