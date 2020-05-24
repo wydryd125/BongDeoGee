@@ -42,7 +42,7 @@ class TutorialViewController: UIViewController {
         
         tutorialLabel.backgroundColor = .clear
         tutorialLabel.numberOfLines = 0
-        tutorialLabel.text = "✔️  두더지 터치 시 100점!\n✔️  봉쓰 터치 시 0점이에요 조심!\n✔️  갑자기 튀어나오는 업쓰를 잡으면 보너스 300! 빠빵"
+        tutorialLabel.text = "✔️  두더지 터치 시 100점!\n✔️  아기 도깨비 터치 시 0점이에요 조심!\n✔️  갑자기 튀어나오는 보너스를 잡으면 보너스 300! 빠빵"
         tutorialLabel.font = UIFont.systemFont(ofSize: 20)
         tutorialLabel.textColor = .black
         

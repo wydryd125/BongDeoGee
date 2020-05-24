@@ -37,14 +37,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = .systemBackground
-        if UserDefaults.standard.string(forKey: UserDefault.name) != nil {
-            window?.rootViewController = MainViewController(name: UserDefaults.standard.string(forKey: UserDefault.name)!,
-                                                            level: GameSet.level1,
-                                                            score: UserDefaults.standard.integer(forKey: UserDefault.score1)
-            )
-        } else {
+//        if UserDefaults.standard.string(forKey: UserDefault.name) != nil {
+//            window?.rootViewController = MainViewController(name: UserDefaults.standard.string(forKey: UserDefault.name)!,
+//                                                            level: GameSet.level1,
+//                                                            score: UserDefaults.standard.integer(forKey: UserDefault.score1)
+//            )
+//        } else {
             window?.rootViewController = LaunchViewController()
-        }
+//        }
         window?.makeKeyAndVisible()
         
         return true
