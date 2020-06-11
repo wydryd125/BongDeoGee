@@ -6,6 +6,8 @@
 
 - 해커톤 당시 "BongDeoGee"라는 이름으로 발표했으나, 앱스토어 출시를 위해 이름을 "DoDeeGee"로 변경하였습니다.
 
+  [App store link](https://apps.apple.com/kr/app/%EB%8F%84%EB%8D%94%EC%A7%80-%EB%91%90%EB%8D%94%EC%A7%80-%EC%9E%A1%EA%B8%B0-%EA%B2%8C%EC%9E%84/id1516156098)
+
 - 강사님과 매니저님의 이미지를 도깨비와 보너스 이미지로 교체하였습니다.
 
 
